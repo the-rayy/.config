@@ -1,0 +1,6 @@
+font-family = FiraCode Nerd Font Mono
+theme = poimandres
+background-opacity = 0.85
+background-blur = true
+mouse-hide-while-typing = true
+shell-integration-features = ssh-terminfo,ssh-env
