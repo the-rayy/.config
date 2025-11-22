@@ -10,7 +10,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "/Users/ray/Dev/obsidian",
+        path = vim.fn.expand("~") .. "/Dev/obsidian",
       },
     },
     notes_subdir = "notes",
