@@ -1,0 +1,6 @@
+*
+
+!.gitignore
+!fish/
+!ghostty
+!nvim
