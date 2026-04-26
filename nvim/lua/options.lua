@@ -17,7 +17,10 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 30
 vim.opt.timeoutlen = 300
 vim.opt.conceallevel = 2
+vim.opt.inccommand = 'split'
+vim.opt.confirm = true
 
+vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 vim.cmd("filetype plugin on")
 
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
