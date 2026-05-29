@@ -6,6 +6,15 @@ return {
 		branch = "main",
 		config = function()
 			require("nvim-treesitter").install { "rust", "python", "bash", "dockerfile", "markdown", "html", "wgsl", "go" }
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function(ev)
+          local ok = pcall(vim.treesitter.start, ev.buf)
+          if ok then
+            vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+            vim.bo[ev.buf].indentexpr = "v:loa.require'nvim-treesitter'.indentexpr()"
+          end
+        end,
+      })
 		end,
 	},
 	{
