@@ -12,14 +12,13 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "rust_analyzer" },
+				ensure_installed = { "lua_ls", "rust_analyzer", "gopls" },
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			vim.lsp.config("lua_ls", {
@@ -35,6 +34,9 @@ return {
 					},
 				},
 			})
+      vim.lsp.config("gopls", {
+        capabilities = capabilities,
+      })
 
 			vim.lsp.enable({ "lua_ls", "gopls", "rust_analyzer" })
 
