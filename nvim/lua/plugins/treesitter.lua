@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		branch = "main",
 		config = function()
-			require("nvim-treesitter").install { "rust", "python", "bash", "docker", "markdown", "html" } 
+			require("nvim-treesitter").install { "rust", "python", "bash", "dockerfile", "markdown", "html", "wgsl" } 
 		end,
 	},
 	{

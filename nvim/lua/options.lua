@@ -20,6 +20,18 @@ vim.opt.conceallevel = 2
 vim.opt.inccommand = 'split'
 vim.opt.confirm = true
 
+vim.diagnostic.config({
+  virtual_lines = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+  float = {
+    border = "rounded",
+    source = "if_many",
+  },
+})
+
 vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 vim.cmd("filetype plugin on")
 
